@@ -2,15 +2,36 @@
 import './app.css';
 import '@picocss/pico/css/pico.classless.pink.min.css';
 import '@fontsource/ibm-plex-sans-jp';
+import { SEO } from 'astro-seo';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='ja'>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <title>DZ Quick Card by Dampuzakura</title>
+    <SEO
+      title='DZ Quick Card by Dampuzakura'
+      description='簡単に名刺を作成することができるアプリ'
+      charset='utf-8',
+      openGraph={{
+        basic: {
+          title: 'DZ Quick Card by Dampuzakura',
+          type: 'website',
+          image: '/favicon.svg',
+        },
+      }}
+      twitter={{
+        creator: '@dampuzakura',
+        title: 'DZ Quick Card by Dampuzakura',
+        description: '簡単に名刺を作成することができるアプリ',
+      }}
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.svg' }],
+        meta: [
+          { name: 'viewport', content: 'width=device-width, initial-scale=1'},
+          { name: 'color-scheme', content: 'light dark' },
+        ],
+      }}
+    />
   </head>
   <body>
     <header>
