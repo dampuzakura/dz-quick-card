@@ -1,4 +1,30 @@
 ---
 import './app.css';
+import '@picocss/pico/css/pico.classless.pink.min.css';
 import '@fontsource/ibm-plex-sans-jp';
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>DZ Quick Card by Dampuzakura</title>
+  </head>
+  <body>
+    <header>
+      <h1>DZ Quick Card by Dampuzakura</h1>
+      <p>
+        簡単に名刺を作成することができるアプリです。
+        クライアント上で作成されるため、安心してご利用いただけます。
+      </p>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© 2024 Dampuzakura. Licensed under the MIT License.</p>
+    </footer>
+  </body>
+</html>

@@ -1,3 +1,8 @@
 body {
   --pico-font-family: 'IBM Plex Sans JP', sans-serif;
 }
+
+#card > canvas {
+  max-width: 80%;
+  max-height: 80%;
+}
