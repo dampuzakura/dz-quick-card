@@ -5,6 +5,7 @@ import { type FormData } from './form';
 let app: PIXI.Application,
   name: PIXI.Text,
   furigana: PIXI.Text,
+  introduction: PIXI.Text,
   company: PIXI.Text,
   position: PIXI.Text,
   email: PIXI.Text,
@@ -71,6 +72,7 @@ const createCard = async () => {
 
   name = createText({ fontWeight: 'bold' });
   furigana = createText({ fontWeight: 'lighter' });
+  introduction = createText({ fontWeight: 'lighter' });
   company = createText({ fontSize: detailsFontSize });
   position = createText({ fontSize: detailsFontSize });
   email = createText({ fontSize: detailsFontSize });
@@ -97,6 +99,7 @@ const createCard = async () => {
   app.stage.addChild(
     name,
     furigana,
+    introduction,
     company,
     position,
     email,
@@ -177,6 +180,11 @@ export const drawCard = async (formData: FormData) => {
   furigana.y = name.y + name.height;
   furigana.style.fontSize = formData.furigana.fontSize;
   furigana.text = formData.furigana.text;
+
+  introduction.x = settings[formData.orientation].name.x;
+  introduction.y = furigana.y + furigana.height;
+  introduction.style.fontSize = formData.introduction.fontSize;
+  introduction.text = formData.introduction.text;
 
   let detailsX = settings[formData.orientation].details.x;
   let detailsBy = settings[formData.orientation].details.by;

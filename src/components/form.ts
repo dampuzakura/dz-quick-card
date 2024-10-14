@@ -8,6 +8,10 @@ export interface FormData {
     text: string;
     fontSize: number;
   },
+  introduction: {
+    text: string;
+    fontSize: number;
+  },
   avatar: FileList;
   yourcolor: string;
   company: string;

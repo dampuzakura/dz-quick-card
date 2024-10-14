@@ -18,6 +18,10 @@
       text: '',
       fontSize: 150,
     },
+    introduction: {
+      text: '',
+      fontSize: 150,
+    },
     avatar: emptyFiles,
     yourcolor: '#6F51A1',
     company: '',
@@ -86,6 +90,21 @@
           bind:value={formData.furigana.fontSize}
         />
         {formData.furigana.fontSize}px
+      </label>
+    </Fieldset>
+    <Fieldset title="自己紹介">
+      <label>
+        <input type="text" bind:value={formData.introduction.text} />
+      </label>
+      <label>
+        フォントサイズ
+        <input
+          type="range"
+          min="100"
+          max="350"
+          bind:value={formData.introduction.fontSize}
+        />
+        {formData.introduction.fontSize}px
       </label>
     </Fieldset>
     <Fieldset title="アバター">
